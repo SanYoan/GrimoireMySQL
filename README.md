@@ -24,7 +24,7 @@ Suivez les étapes ci-dessous pour installer et configurer le projet localement 
 
 Configuration de la Base de Données
 
-Avant de lancer le projet, assurez-vous d'avoir configuré votre base de données MongoDB. Vous pouvez suivre les étapes suivantes :
+Avant de lancer le projet, assurez-vous d'avoir configuré votre base de données MySQL. Vous pouvez suivre les étapes suivantes :
 
 Installez xammp server ( lancer xammp control panel ) 
 - lancez apache & mySQL depuis xammp
