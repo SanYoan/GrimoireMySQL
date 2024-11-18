@@ -26,17 +26,17 @@ Configuration de la Base de Données
 
 Avant de lancer le projet, assurez-vous d'avoir configuré votre base de données MongoDB. Vous pouvez suivre les étapes suivantes :
 
-    Accédez au site web de MongoDB https://www.mongodb.com/cloud/atlas/register et inscrivez-vous pour obtenir un compte.
+Installez xammp server ( lancer xammp control panel ) 
+- lancez apache & mySQL depuis xammp
+- ensuite configuré une BDD sur phpMyAdmin "oldgrimoire" ,
+- nom utilisateur pour mySQL par défaut 'root' dans le fichier config -> database.js remplacé par le votre
+- mdp dans une variable d'environemment crée un fichier .env a la racine du backend
 
-    Une fois que vous avez accès à votre tableau de bord, créez un cluster et configurez-le selon vos besoins.
-
-    Récupérez votre code URI sur MongoDB et ajoutez-le dans un fichier .env que vous créez à la racine du projet ( backend ). Configurez les variables d'environnement suivantes (variables listées dans le fichier .env):
-
-MONGO_URL=   "VOTRE_URL_MONGODB"
-KEY_SECRET = "CLE_DE_VOTRE_CHOIX"
+MDP_MYSQL=   "VOTRE_MDP_MySQL"
+KEY_SECRET = "CLE_DE_VOTRE_CHOIX" ( pour la clef secrete du token )
 
   
-    Remplacez MONGO_URL par l'URL de connexion à votre base de données MongoDB, sous le format "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority".
+    Remplacez MDP_MYSQL par le mdp  de connexion à votre base de données MySQL.
     Remplacez KEY_SECRET par une clé secrète de votre choix pour les tokens JWT.
 
 Lancement du backend :
@@ -50,7 +50,7 @@ Exécutez npm install -g nodemon
 
 et ensuite lancez l'application avec la commande suivante : 
 
-nodemon server 
+npm node 
 )
 
 L'application sera accessible à l'adresse http://localhost:4000. Si le serveur fonctionne sur un port différent pour une raison quelconque, le numéro de port correspondant s'affichera dans la console.
